@@ -1,5 +1,5 @@
 /*
-Dizque se utiliza bastante.
+
 Crear un algoritmo que tome un array de objetos y devuelva un array de pares. (array de array)
 */
 

@@ -26,9 +26,8 @@ function mostrarDatosClima(data) {
     const descripcion = data.weather[0].description
     const humedad = data.main.humidity
     const icono = data.weather[0].icon
+    const urlIcono = `https://openweathermap.org/img/wn/${icono}@2x.png`
 
-
-    const urlIcono = 'https://openweathermap.org/img/wn/{icon_code}@2x.png'
     // Crear elementos para los atributos que se mostrarán
     const ciudadTitulo = document.createElement('h2')
     ciudadTitulo.textContent = `${ciudadNombre}, ${paisNombre}`
@@ -40,7 +39,7 @@ function mostrarDatosClima(data) {
     humedadInfo.textContent = `Humedad 👉 ${humedad}%`
 
     const iconoInfo = document.createElement('img')
-    iconoInfo.src = `https://openweathermap.org/img/wn/${icono}@2x.png`
+    iconoInfo.src = urlIcono
 
     const descripcionInfo = document.createElement('p')
     descripcionInfo.textContent = `Descripción meteorológica es: ${descripcion}`
